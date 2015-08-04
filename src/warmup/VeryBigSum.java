@@ -5,7 +5,7 @@ import java.util.*;
 import java.math.*;
 
 public class VeryBigSum {
-	/*
+	/***
 	 * PROBLEM STATEMENT FROM HACKERRANK
 	 * Problem Statement :
 
@@ -22,6 +22,10 @@ public class VeryBigSum {
 		Output Format
 
 		Output a single value equal to the sum of the elements of the array.
+		
+		COMPLEXITY
+		Time Complexity: O(n)
+		Space Complexity: O(1)
 	 */
 	
 	public static void main(String[] args) {
