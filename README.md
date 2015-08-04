@@ -3,7 +3,7 @@
 Anyone with a fair analytical knowledge can solve a problem. But only a passionate software programmer can "ENGINEER" the code.  
 
 ENGINEERING a code has several different qualities :
-1. The code has to be written in such a way that it runs efficiently and in the smallest amount of time
+1. The code has to be written in such a way that it runs efficiently and in the smallest amount of time </br>
 2. All the corner cases has to be covered.
 3. Follow the Naming conventions
 4. The algorithmic complexity should be as minimal as possible
