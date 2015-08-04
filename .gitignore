@@ -13,3 +13,6 @@ target/
 *.war
 *.ear
 *.db
+.classpath
+.settings/
+.loadpath

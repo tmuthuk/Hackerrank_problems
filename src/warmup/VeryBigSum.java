@@ -28,13 +28,17 @@ public class VeryBigSum {
 		//get the N value 
 		Scanner sc = new Scanner(System.in);
 		int N = sc.nextInt();		 
+		
+		//sum can be stored in long variable to avoid integer overflow
 		long sum = 0;
-		if(N >= 0 && N <= 10) {				
-			while (sc.hasNext()) {
-				//loop until N and fill the array with integer values => can be long too
+		
+		if(N >= 0 && N <= 10) {
+			//loop until N, read the user input and calculate the sum at each iteration
+			while (sc.hasNext()) {				 
 				int num = sc.nextInt();
+				//corner case 2: Greater than 0 and less than 10^10
 				if(num >= 0 && num <= Math.pow(10, 10)) {
-					sum = sum + num;
+					sum += num;
 				}
 			}
 		}
