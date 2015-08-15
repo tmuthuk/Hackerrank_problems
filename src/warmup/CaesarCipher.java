@@ -39,14 +39,22 @@ public class CaesarCipher {
 			for(int i=0;i<c.length();i++) {
 				char d = c.charAt(i);				
 				if((d >= 'a' && d <= 'z') || (d >='A' && d <= 'Z')) {					 
-					char incr = 0; 
-					char s = c.charAt(i);
-					if(d >= 'a' && d <= 'z') {							
-						int diff = (int) 'z' - d;
+					char incr = 0; 		
+					char start_ltr = 0;
+					int diff = 0;
+					if(d >= 'a' && d <= 'z') {
+						start_ltr = 'a';
+						diff = (int) 'z' - d;
+					}
+					else {
+						start_ltr = 'A';
+						diff = (int) ('Z' - (char)d);
+					}
+
 						 if(k > diff) {
 							 int lap = k%26;
 							 if(lap > diff) {
-								 incr = (char) ('a' +((lap - diff) - 1));
+								 incr = (char) (start_ltr +((lap - diff) - 1));
 							 }	
 							 else if(lap == diff){
 								 incr = (char) (d +lap);
@@ -56,31 +64,9 @@ public class CaesarCipher {
 							}
 						}
 						else {
-							incr = (char) (s + k);
+							incr = (char) (d + k);
 						}
-					}
-					else if((d >= 'A') && (d <='Z')) {
-						int diff = (int) ('Z' - (char)d);					
-						if(k > diff) {
-							 int lap = k%26;
-							 if(lap > diff) {
-								 incr = (char) ('A' +((lap - diff) - 1));
-							 }	
-							 else if(lap == diff){
-								 incr = (char) (d +lap);
-							 }
-							 else if(lap < diff){
-							incr = (char) (d +lap);  
-							}	
-						}
-						else {
-							incr = (char) (s + k);	
-						}						
-					}
-					
-					else {
-						incr = (char) (s+k);
-					}
+
 					sb.append(incr);
 				}
 			//if the character is any special character, Just append it
