@@ -62,13 +62,3 @@ public class CookieParty {
     }
 }
 
-//        while (n * noc != m) {
-//            if (n*noc < m) {
-//                noc ++;
-//            }
-//
-//            if (m < n*noc) {
-//                diffM = n*noc - m;
-//                m = n*noc + diffM;
-//            }
-//}
