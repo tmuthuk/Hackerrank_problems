@@ -1,6 +1,4 @@
 import challenge.CookieParty;
-import org.omg.PortableInterceptor.SYSTEM_EXCEPTION;
-import org.testng.*;
 import org.testng.annotations.Test;
 import static org.testng.Assert.assertEquals;
 
