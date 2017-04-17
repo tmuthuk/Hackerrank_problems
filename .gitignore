@@ -2,7 +2,11 @@
 /build/
 /bin/
 target/
- 
+
+*.iml
+.project
+.idea/
+
 # OS Files #
 .DS_Store
  
