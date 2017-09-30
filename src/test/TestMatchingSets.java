@@ -1,11 +1,7 @@
+package test;
 import challenge.CookieParty;
 import challenge.MatchingSets;
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 import org.testng.annotations.Test;
-
-import java.util.List;
-
-import static org.testng.Assert.assertEquals;
 
 /**
  * Created by Tamilthaaragai on 8/14/2016.

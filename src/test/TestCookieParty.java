@@ -1,6 +1,10 @@
+package test;
+
 import challenge.CookieParty;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertEquals;
+
 
 /**
  * Created by Tamilthaaragai on 8/13/2016.
