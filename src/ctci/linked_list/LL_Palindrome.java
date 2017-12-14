@@ -6,7 +6,7 @@ import ctci.linked_list.utils.Node;
 import java.util.ArrayList;
 
 /**
- * Created by Tamilthaaragai on 12/12/2017.
+ * Linked List Problem: 2.6
  */
 public class LL_Palindrome {
     static  StringBuilder sb1 = new StringBuilder();
