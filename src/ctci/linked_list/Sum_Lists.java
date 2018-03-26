@@ -1,7 +1,7 @@
 package ctci.linked_list;
 
-import ctci.linked_list.utils.LinkedList;
-import ctci.linked_list.utils.Node;
+import utils.LinkedList.LinkedList;
+import utils.LinkedList.Node;
 
 import java.util.ArrayList;
 

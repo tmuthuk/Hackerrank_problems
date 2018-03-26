@@ -1,4 +1,4 @@
-package ctci.linked_list.utils;
+package utils.LinkedList;
 
 /**
  * Created by Tamilthaaragai on 12/12/2017.

@@ -1,4 +1,4 @@
-package ctci.linked_list.utils;
+package utils.LinkedList;
 
 import java.util.ArrayList;
 
