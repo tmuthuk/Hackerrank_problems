@@ -1,9 +1,12 @@
+package test;
+
+import org.junit.Test;
+
+import static org.junit.Assert.assertEquals;
+
 /**
  * Created by Tamilthaaragai on 8/13/2016.
  */
-
-import org.testng.annotations.Test;
-import static org.testng.Assert.assertEquals;
 
 public class TestTwoSum {
 

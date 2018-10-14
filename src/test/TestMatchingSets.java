@@ -1,7 +1,6 @@
 package test;
-import challenge.CookieParty;
 import challenge.MatchingSets;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
 /**
  * Created by Tamilthaaragai on 8/14/2016.

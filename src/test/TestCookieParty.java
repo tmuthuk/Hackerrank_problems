@@ -1,9 +1,9 @@
 package test;
 
 import challenge.CookieParty;
-import org.testng.annotations.Test;
+import org.junit.Test;
 
-import static org.testng.Assert.assertEquals;
+import static org.junit.Assert.assertEquals;
 
 
 /**
