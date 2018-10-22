@@ -14,12 +14,7 @@ import java.util.List;
  * Both of the given trees will have between 1 and 100 nodes.
  */
 
- class TreeNode {
-     int val;
-      TreeNode left;
-      TreeNode right;
-      TreeNode(int x) { val = x; }
-  }
+
 
 public class LeafSimilarTrees {
     private List<Integer> root1Leaves = new LinkedList<>();
