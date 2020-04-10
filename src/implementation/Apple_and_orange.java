@@ -1,9 +1,6 @@
 package implementation;
 
-import java.io.*;
 import java.util.*;
-import java.text.*;
-import java.math.*;
 
 public class Apple_and_orange {
     public static void main(String[] args) {
