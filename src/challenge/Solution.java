@@ -1,6 +1,5 @@
 package challenge;
 
-import com.sun.org.apache.xerces.internal.impl.xpath.regex.Match;
 
 import java.util.Scanner;
 
@@ -17,6 +16,7 @@ public class Solution {
         int b[] = new int[n];
         for(int a_i=0; a_i < n; a_i++){
             a[a_i] = in.nextInt();
+            System.out.println(a[a_i]);
         }
 
 
