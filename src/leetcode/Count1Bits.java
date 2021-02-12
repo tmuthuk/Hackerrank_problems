@@ -28,9 +28,7 @@ package leetcode;
  because the rest of the bit combinations with the most significant bit as '1' represent the negative integers −1 to −128.
  */
 
-import java.util.HashMap;
-import java.util.Map;
-
+// Achieved Runtime 1 ms and memory 38 MB
 public class Count1Bits {
     private static int countBits(int num) {
         int count = 0;
