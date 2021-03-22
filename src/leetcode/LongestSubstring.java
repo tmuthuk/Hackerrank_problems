@@ -1,7 +1,5 @@
 package leetcode;
 
-import java.util.HashMap;
-
 /**
  * Given a string, find the length of the longest substring without repeating characters.
  Examples:
@@ -13,20 +11,40 @@ import java.util.HashMap;
 public class LongestSubstring {
 
     public static int lengthOfLongestSubstring(String s) {
-        if (s.isEmpty()) return 0;
+        if ( s.equals(" ")) {return 1;}
+        if(s.isEmpty()) return 0;
 
-        int maxLength = 0;
-        HashMap<Character, Integer> map = new HashMap<>();
+        int longestStreak = 0;
+        int lastKnownGoodIndex = 0;
+        String longestSubstring = "";
 
-        for(int j=0, i=0; j<s.length(); j++) {
-            if(map.containsKey(s.charAt(j))) {
-                i = Math.max(map.get(s.charAt(j)), i);
+        for(int i=0; i<s.length(); i++) {
+            int index = longestSubstring.indexOf(s.charAt(i));
+
+            if(index == -1) {
+                longestSubstring = longestSubstring + s.charAt(i);
+
+                if(longestStreak < longestSubstring.length()) {
+                    longestStreak = longestSubstring.length();
+                }
             }
-            maxLength = Math.max(maxLength, j - i +1);
-            map.put(s.charAt(j), j+1);
+            else {
+                if (lastKnownGoodIndex <= index && index < s.length() ) {
+                    lastKnownGoodIndex = index + 1;
+                }
+                if(longestStreak < longestSubstring.length()) {
+                    longestStreak = longestSubstring.length();
+                }
+                longestSubstring = longestSubstring + s.charAt(i);
+
+                longestSubstring = new String(longestSubstring.subSequence(lastKnownGoodIndex, longestSubstring.length()).toString());
+                lastKnownGoodIndex = 0;
+            }
+
         }
-        return maxLength;
+        return longestStreak;
     }
+
 
     public static void main(String[] args) {
 
