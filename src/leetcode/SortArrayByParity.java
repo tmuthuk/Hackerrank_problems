@@ -1,8 +1,5 @@
 package leetcode;
 
-import java.util.ArrayList;
-import java.util.List;
-
 /**
  * Problem Description
  *
@@ -21,38 +18,22 @@ import java.util.List;
  *
  * 1 <= A.length <= 5000
  * 0 <= A[i] <= 5000
- * Tip to yourself.. Instead of using two separate lists,
- * use the finalArray and do a two pass on the input
  */
 
 public class SortArrayByParity {
     public int[] sortArrayByParity(int[] A) {
-        // Sort by even and odd
-
-        // iterate through each item in the list
-        List<Integer> evenBkt = new ArrayList<>();
-        List<Integer> oddBkt = new ArrayList<>();
-        int arrSize = A.length;
-        for(int item: A) {
-            if (item % 2 == 0) {
-                evenBkt.add(item);
+        int[] result = new int[A.length];
+        for(int i=0,k=0, j=A.length-1; i<A.length  && j>=0;i++) {
+            // increment i for even
+            if (A[i] % 2 == 0) {
+                result[k] = A[i];
+                k++;
             } else {
-                oddBkt.add(item);
+                // decrement j for odd
+                result[j] = A[i];
+                j--;
             }
         }
-
-        // combine both the buckets in the int array
-        int[] finalArr = new int[arrSize];
-        int i = 0;
-        for(int item: evenBkt) {
-            finalArr[i] = item;
-            i++;
-        }
-
-        for(int item: oddBkt) {
-            finalArr[i] = item;
-            i++;
-        }
-        return finalArr;
+        return result;
     }
 }
