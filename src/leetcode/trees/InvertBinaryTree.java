@@ -1,7 +1,5 @@
 package leetcode.trees;
 
-import leetcode.TreeNode;
-
 /**
  * LC Easy #226
  *

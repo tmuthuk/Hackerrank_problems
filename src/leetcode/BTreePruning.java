@@ -1,5 +1,7 @@
 package leetcode;
 
+import leetcode.trees.TreeNode;
+
 /**
  * Problem Description
  *
