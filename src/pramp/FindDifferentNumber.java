@@ -1,4 +1,4 @@
-package leetcode.arrays_strings;
+package pramp;
 
 import java.util.ArrayList;
 import java.util.List;
