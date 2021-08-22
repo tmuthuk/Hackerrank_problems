@@ -12,6 +12,8 @@ import java.util.Vector;
  *
  * input: [1,1,1,7], target: 6
  * output: false
+ *
+ * Run time complexity: O(n)
  */
 public class ContiguousSequence {
     public static  boolean findTarget(Vector<Integer> arr, int target) {
