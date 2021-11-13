@@ -4,7 +4,7 @@ package interviews;
  *
  */
 /*
-
+Snorkel
 A regular map has the following interface methods:
 
 - get(k) -> v or KeyError
@@ -91,7 +91,6 @@ import java.util.HashMap;
 public class ModifiedMap {
     public static void main(String[] args) {
         ModifiedMap map = new ModifiedMap();
-
 
         map.put("a", 1);
         map.put("b", 2);

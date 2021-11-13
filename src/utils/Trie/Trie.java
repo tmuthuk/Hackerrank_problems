@@ -55,5 +55,4 @@ public class Trie {
         if(parent == root) return null;
         return parent;
     }
-
 }

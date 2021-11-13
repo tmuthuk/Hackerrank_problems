@@ -50,10 +50,9 @@ Complexity analysis variables:
 n: number of logs in the input
 
 */
-import java.io.*;
 import java.util.*;
 
-public class Solution {
+public class LogsAnalyzer {
 
     public static void main(String[] argv) {
 
@@ -84,8 +83,10 @@ public class Solution {
                 {"1202", "user_1", "resource_3"}
         };
 
-        System.out.println(getAccessLogs(logs1));
-        System.out.println(getAccessLogs(logs2));
+//        System.out.println(getAccessLogs(logs1));
+//        System.out.println(getAccessLogs(logs2));
+
+        most_requested_resource(logs2);
 
     }
 
@@ -127,8 +128,19 @@ public class Solution {
         return map;
     }
 
-    public static  most_requested_resource(String[][] input) {
-        ResourceInfo info = new ResourceInfo();
+    /**
+     * Example 2:
+     * logs2 = [
+     *     ["300", "user_1", "resource_3"],
+     *     ["599", "user_1", "resource_3"],
+     *     ["900", "user_1", "resource_3"],
+     *     ["1199", "user_1", "resource_3"],
+     *     ["1200", "user_1", "resource_3"],
+     *     ["1201", "user_1", "resource_3"],
+     *     ["1202", "user_1", "resource_3"]
+     * ]
+     */
+    public static  void most_requested_resource(String[][] input) {
 
         HashMap<String, TreeSet<Integer>> map = new HashMap<>();
 
@@ -154,13 +166,54 @@ public class Solution {
 
         }
 
+        ResourceInfo info = new ResourceInfo();
 
+        int FIVE_MINUTES = 5 * 60;
+        for(Map.Entry<String, TreeSet<Integer>> entry : map.entrySet()) {
+            String resource = entry.getKey();
+            TreeSet<Integer> set = entry.getValue();
 
-        return info;
+            ArrayList<Integer> list = new ArrayList<>(set);
+            ArrayList<Integer> differences = new ArrayList<>();
+
+            // for the first element
+            differences.add(0);
+            for(int i=1; i<list.size();i++) {
+                differences.add(list.get(i) - list.get(i-1));
+            }
+            System.out.println(differences);
+
+            int curCounter = 0;
+            int curTotal = 0;
+            for (int i = 0;i< differences.size(); i++) {
+                if(curTotal + differences.get(i) <= 300) {
+                    curTotal += differences.get(i);
+                    curCounter++;
+                } else {
+                    // if it is greater
+                    // check if the
+
+                    if(info.count < curCounter) {
+                        info.resourceName = resource;
+                        info.count = curCounter;
+                    }
+                    curTotal = differences.get(i);
+                    curCounter = 1;
+                }
+
+                if(info.count < curCounter) {
+                    info.resourceName = resource;
+                    info.count = curCounter;
+                }
+
+            }
+
+        }
+
     }
 }
 
 class ResourceInfo {
-    public String resourceName;
-    public int count;
+    public String resourceName = "";
+    public int count = 0;
 }
